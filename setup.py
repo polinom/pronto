@@ -3,7 +3,7 @@ Tool to make PR realeasing easier
 """
 from setuptools import find_packages, setup
 
-dependencies = ['click']
+dependencies = ['click', 'gitpython', 'jira']
 
 setup(
     name='pronto',
@@ -22,6 +22,8 @@ setup(
     entry_points={
         'console_scripts': [
             'pronto = pronto.cli:main',
+            'jira = pronto.cli:jira',
+            'comments = pronto.cli:comments',
         ],
     },
     classifiers=[
